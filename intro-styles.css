@@ -10,6 +10,7 @@ body {
     height: 100vh;
     overflow: hidden;
     color: #ffffff;
+    position: relative; /* Ensure proper positioning for overlay */
 }
 
 /* Splash Screen Styles */
@@ -19,13 +20,17 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
-    background-image: url(440cfbc8d040ebabc692b8f03bc91cac.jpg);
+    background-image: url('440cfbc8d040ebabc692b8f03bc91cac.jpg');
+    background-size: cover; /* Ensure the background covers the viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent background repetition */
     position: absolute;
     top: 0;
     left: 0;
     animation: fadeOut 2s forwards;
 }
 
+/* Splash Image Styles */
 .splash-image-container {
     display: flex;
     justify-content: center;
@@ -35,8 +40,8 @@ body {
 }
 
 .splash-image {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
     animation: scaleIn 1s ease-out; /* Subtle scaling effect */
 }
 
@@ -74,7 +79,7 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
     text-align: center;
     max-width: 360px;
-    width: 100%;
+    width: 90%; /* Make container responsive */
     transform: translateY(-20px);
     animation: fadeInUp 1s ease-out;
     border: 2px solid #8A2BE2;
