@@ -144,4 +144,25 @@ body {
     .post-header img {
         width: 40px;
         height: 40px;
-   
+    }
+
+    .post-header .user-info h3 {
+        font-size: 16px;
+    }
+
+    .post p {
+        font-size: 14px;
+    }
+
+    .post .actions button {
+        font-size: 12px;
+    }
+
+    .post-header .user-info .username {
+        font-size: 12px;
+    }
+
+    .post-header .user-info .date {
+        font-size: 10px;
+    }
+}
