@@ -3,13 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> My News Feed</title>
-    <link rel="stylesheet" href="news-styles.css">
+    <title>Facebook Neon Theme</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2e2e2e; /* Dark background for neon effect */
+            color: #dcdcdc;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #6a0dad; /* Light purple */
+            color: white;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 0 10px #e066ff; /* Neon glow */
+        }
+        .header .logo {
+            font-size: 20px;
+            font-weight: bold;
+            text-shadow: 0 0 10px #e066ff; /* Neon glow */
+        }
+        .header .search-bar {
+            width: 100%;
+            margin-left: 10px;
+            padding: 5px;
+            border-radius: 15px;
+            border: none;
+            max-width: 200px;
+            background-color: #dcdcdc;
+            color: #2e2e2e;
+        }
+        .sidebar {
+            display: none; /* Hide sidebar on mobile */
+        }
+        .main-content {
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .post {
+            background-color: #3a3a3a;
+            padding: 15px;
+            margin-bottom: 10px;
+            box-shadow: 0 0 10px #e066ff; /* Neon glow */
+            border-radius: 10px;
+        }
+        .post-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .post-header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%; /* Ensures the profile picture is perfectly circular */
+            margin-right: 10px;
+            box-shadow: 0 0 5px #e066ff; /* Neon glow */
+            object-fit: cover; /* Ensures the image covers the entire circular area */
+        }
+        .post-header .user-info {
+            display: flex;
+            flex-direction: column;
+        }
+        .post-header .user-info h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #e066ff; /* Neon text */
+            text-shadow: 0 0 5px #e066ff; /* Neon glow */
+        }
+        .post-header .user-info .username {
+            font-size: 14px;
+            color: #b3b3b3;
+        }
+        .post-header .user-info .date {
+            font-size: 12px;
+            color: #8a8a8a;
+        }
+        .post p {
+            margin: 0;
+            font-size: 16px;
+            color: #dcdcdc;
+        }
+        .post img {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 10px;
+            box-shadow: 0 0 15px #e066ff; /* Neon glow for images */
+        }
+        .post .actions {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .post .actions button {
+            background: none;
+            border: none;
+            color: #e066ff;
+            cursor: pointer;
+            font-size: 14px;
+            padding: 10px;
+            flex-grow: 1;
+            text-align: center;
+            text-shadow: 0 0 5px #e066ff; /* Neon glow */
+            transition: all 0.3s ease;
+        }
+        .post .actions button:hover {
+            background-color: #6a0dad;
+            border-radius: 5px;
+            box-shadow: 0 0 15px #e066ff; /* Neon glow */
+        }
+
+        /* Mobile-specific styles */
+        @media (max-width: 768px) {
+            .header .logo {
+                font-size: 18px;
+            }
+            .header .search-bar {
+                max-width: 150px;
+            }
+            .main-content {
+                padding: 5px;
+            }
+            .post-header img {
+                width: 40px;
+                height: 40px;
+            }
+            .post h3 {
+                font-size: 16px;
+            }
+            .post p {
+                font-size: 14px;
+            }
+            .post .actions button {
+                font-size: 12px;
+            }
+            .post-header .user-info .username {
+                font-size: 12px;
+            }
+            .post-header .user-info .date {
+                font-size: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
 
     <div class="header">
-        <div class="logo">My News Feed</div>
+        <div class="logo">facebook</div>
         <input type="text" class="search-bar" placeholder="Search">
     </div>
 
@@ -19,12 +161,13 @@
             <div class="post-header">
                 <img src="profile1.jpg" alt="Profile picture">
                 <div class="user-info">
-                    <h3>Jhon Mark L. Lumibao</h3>
-                    <span class="username">@Hatsuki</span>
+                    <h3>John Noel Guarte</h3>
+                    <span class="username">@johnnoel</span>
                     <span class="date">August 17, 2024</span>
                 </div>
             </div>
-            <p>Hi Love, Update: Gumagawang ng wesite</p>
+            <p>May nakipic sa phone ko sino ba to?</p>
+            <img src="image1.jpg" alt="Post image">
             <div class="actions">
                 <button>Like</button>
                 <button>Comment</button>
@@ -35,14 +178,14 @@
         <!-- Post 2 -->
         <div class="post">
             <div class="post-header">
-                <img src="profile1.jpg" alt="Profile picture">
+                <img src="profile2.jpg" alt="Profile picture">
                 <div class="user-info">
-                    <h3> Jhon Mark L. Lumibao</h3>
-                    <span class="username">@Hatsuki</span>
-                    <span class="date">August 18, 2024</span>
+                    <h3>Jane Doe</h3>
+                    <span class="username">@janedoe</span>
+                    <span class="date">August 17, 2024</span>
                 </div>
             </div>
-            <p>Ang saya ko dahil nag kita kami ngayon, Namimiss ko na sya :(</p>
+            <p>What a beautiful day!</p>
             <img src="image2.jpg" alt="Post image">
             <div class="actions">
                 <button>Like</button>
@@ -54,14 +197,14 @@
         <!-- Post 3 -->
         <div class="post">
             <div class="post-header">
-                <img src="profile1.jpg" alt="Profile picture">
+                <img src="profile3.jpg" alt="Profile picture">
                 <div class="user-info">
-                    <h3>Jhon Mark L. Lumibao</h3>
-                    <span class="username">@Hatsuki</span>
-                    <span class="date">August 19, 2024</span>
+                    <h3>Michael Smith</h3>
+                    <span class="username">@mikesmith</span>
+                    <span class="date">August 17, 2024</span>
                 </div>
             </div>
-            <p>Kinakabahan pumasok HSahghahshahd</p>
+            <p>Just finished my workout! Feeling great!</p>
             <img src="image3.jpg" alt="Post image">
             <div class="actions">
                 <button>Like</button>
@@ -73,7 +216,7 @@
         <!-- Post 4 -->
         <div class="post">
             <div class="post-header">
-                <img src="profile1.jpg" alt="Profile picture">
+                <img src="profile4.jpg" alt="Profile picture">
                 <div class="user-info">
                     <h3>Anna Belle</h3>
                     <span class="username">@annabelle</span>
@@ -92,7 +235,7 @@
         <!-- Post 5 -->
         <div class="post">
             <div class="post-header">
-                <img src="profile1.jpg" alt="Profile picture">
+                <img src="profile5.jpg" alt="Profile picture">
                 <div class="user-info">
                     <h3>Chris Evans</h3>
                     <span class="username">@chrisevans</span>
@@ -111,23 +254,10 @@
         <!-- Post 6 -->
         <div class="post">
             <div class="post-header">
-                <img src="profile1.jpg" alt="Profile picture">
+                <img src="profile6.jpg" alt="Profile picture">
                 <div class="user-info">
                     <h3>Sarah Connor</h3>
                     <span class="username">@sarahconnor</span>
                     <span class="date">August 17, 2024</span>
                 </div>
-            </div>
-            <p>Just finished a great book!</p>
-            <img src="image6.jpg" alt="Post image">
-            <div class="actions">
-                <button>Like</button>
-                <button>Comment</button>
-                <button>Share</button>
-            </div>
-        </div>
-    </div>
-
-    <script src="scripts.js"></script>
-</body>
-</html>
+           
