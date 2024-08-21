@@ -10,7 +10,7 @@
 
     <div class="header">
         <div class="logo">My News Feed</div>
-        <button class="logout-button">Log Out</button>
+        <button class="logout-button" onclick="logout()">Log Out</button>
     </div>
 
     <div class="main-content">
@@ -135,6 +135,11 @@
         </div>
     </div>
 
-    <script src="scripts.js"></script>
+    <script>
+        function logout() {
+            // Redirect to the index.html page (you can replace this with your own logic)
+            window.location.href = 'index.html';
+        }
+    </script>
 </body>
 </html>
