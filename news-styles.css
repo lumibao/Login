@@ -10,15 +10,20 @@ body {
 .header {
     background-color: #6a0dad; /* Light purple */
     color: white;
-    padding: 10px;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 0 10px #e066ff; /* Neon glow */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .header .logo {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
     text-shadow: 0 0 10px #e066ff; /* Neon glow */
 }
@@ -30,7 +35,7 @@ body {
     border-radius: 15px;
     border: none;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
     box-shadow: 0 0 10px #e066ff; /* Neon glow */
     transition: all 0.3s ease;
 }
@@ -42,30 +47,34 @@ body {
 }
 
 .main-content {
-    padding: 10px;
-    margin-top: 10px;
+    padding: 60px 20px 20px; /* Adjusted for fixed header */
+    margin: 0 auto;
+    max-width: 1200px; /* Limit content width */
 }
 
 /* Post Styles */
 .post {
     background-color: #3a3a3a;
-    padding: 15px;
-    margin-bottom: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
     box-shadow: 0 0 10px #e066ff; /* Neon glow */
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
 .post-header {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .post-header img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%; /* Ensures the profile picture is perfectly circular */
-    margin-right: 10px;
+    margin-right: 15px;
     box-shadow: 0 0 5px #e066ff; /* Neon glow */
     object-fit: cover; /* Ensures the image covers the entire circular area */
 }
@@ -77,24 +86,24 @@ body {
 
 .post-header .user-info h3 {
     margin: 0;
-    font-size: 18px;
+    font-size: 20px;
     color: #e066ff; /* Neon text */
     text-shadow: 0 0 5px #e066ff; /* Neon glow */
 }
 
 .post-header .user-info .username {
-    font-size: 14px;
+    font-size: 16px;
     color: #b3b3b3;
 }
 
 .post-header .user-info .date {
-    font-size: 12px;
+    font-size: 14px;
     color: #8a8a8a;
 }
 
 .post p {
     margin: 0;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
     color: #dcdcdc;
 }
@@ -102,25 +111,26 @@ body {
 .post img {
     width: 100%;
     height: auto;
-    margin-top: 10px;
+    margin-top: 15px;
     border-radius: 10px;
     box-shadow: 0 0 10px #e066ff; /* Neon glow */
 }
 
 .actions {
-    margin-top: 10px;
+    margin-top: 15px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .actions button {
     background-color: #6a0dad;
     color: white;
     border: none;
-    padding: 5px 15px;
+    padding: 8px 20px;
     border-radius: 15px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
+    margin-right: 10px;
     transition: all 0.3s ease;
 }
 
