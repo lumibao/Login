@@ -41,10 +41,6 @@ body {
     box-shadow: 0 0 15px #e066ff; /* Stronger neon glow on hover */
 }
 
-.sidebar {
-    display: none; /* Hide sidebar on mobile */
-}
-
 .main-content {
     padding: 10px;
     margin-top: 10px;
@@ -135,12 +131,14 @@ body {
 
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
-    .header .search-bar {
-        display: none; /* Hide search bar on mobile */
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .main-content {
-        padding: 5px;
+    .header .logout-button {
+        align-self: flex-end;
+        margin-top: 10px;
     }
 
     .post-header img {
@@ -155,5 +153,9 @@ body {
     .post-header .user-info .username,
     .post-header .user-info .date {
         font-size: 12px;
+    }
+
+    .main-content {
+        padding: 5px;
     }
 }
