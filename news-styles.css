@@ -1,140 +1,159 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My News Feed</title>
-    <link rel="stylesheet" href="news-styles.css">
-</head>
-<body>
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2e2e2e; /* Dark background for neon effect */
+    color: #dcdcdc;
+    margin: 0;
+    padding: 0;
+}
 
-    <div class="header">
-        <div class="logo">My News Feed</div>
-        <button class="logout-button">Log Out</button>
-    </div>
+.header {
+    background-color: #6a0dad; /* Light purple */
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 10px #e066ff; /* Neon glow */
+}
 
-    <div class="main-content">
-        <!-- Post 1 -->
-        <div class="post">
-            <div class="post-header">
-                <img src="profile1.jpg" alt="Profile picture">
-                <div class="user-info">
-                    <h3>Jhon Mark L. Lumibao</h3>
-                    <span class="username">@Hatsuki</span>
-                    <span class="date">August 17, 2024</span>
-                </div>
-            </div>
-            <p>Hi Love, Update: Gumagawang ng website</p>
-            <div class="actions">
-                <button>Like</button>
-                <button>Comment</button>
-                <button>Share</button>
-            </div>
-        </div>
+.header .logo {
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #e066ff; /* Neon glow */
+}
 
-        <!-- Post 2 -->
-        <div class="post">
-            <div class="post-header">
-                <img src="profile1.jpg" alt="Profile picture">
-                <div class="user-info">
-                    <h3> Jhon Mark L. Lumibao</h3>
-                    <span class="username">@Hatsuki</span>
-                    <span class="date">August 18, 2024</span>
-                </div>
-            </div>
-            <p>Ang saya ko dahil nag kita kami ngayon, Namimiss ko na sya :(</p>
-            <img src="9231c71f6f02f3a0ec8940dadfe3f049.gif" alt="Post image">
-            <div class="actions">
-                <button>Like</button>
-                <button>Comment</button>
-                <button>Share</button>
-            </div>
-        </div>
+.logout-button {
+    background-color: #dcdcdc; /* Same as search bar background */
+    color: #2e2e2e; /* Dark text color */
+    padding: 5px 15px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 0 10px #e066ff; /* Neon glow */
+    transition: all 0.3s ease;
+}
 
-        <!-- Post 3 -->
-        <div class="post">
-            <div class="post-header">
-                <img src="profile1.jpg" alt="Profile picture">
-                <div class="user-info">
-                    <h3>Jhon Mark L. Lumibao</h3>
-                    <span class="username">@Hatsuki</span>
-                    <span class="date">August 19, 2024</span>
-                </div>
-            </div>
-            <p>Mahal kong Mundo,</p>
-            <p>‎ ‎ ‎ ‎ ‎ </p>
-            <p>Sa bawat patak ng ulan, ay lumilipas ang mga alaala ng kahapon, tulad ng mga dahon sa hangin na naglalaho. Ikaw ang ilaw sa dilim, gabay sa landas ng walang kasiguraduhan. Sa bawat pagliko ng iyong bilog na anyo, sumisibol ang bagong pag-asa, tulad ng pag-usbong ng bulaklak sa taglamig. Ang iyong sinag ay nagbibigay-buhay, ngunit sa likod ng iyong ningning, naroon ang mga lihim na nais ipabatid. Nawa’y manatiling busilak ang iyong puso, at ang iyong kagandahan ay hindi maglaho kailanman.</p>
-            <p>‎ ‎ ‎ ‎ ‎ ‎ </p>
-            <p>Lubos na gumagalang,</p>
-            <p>Iyong mahal na nagmamasid sa iyong kagandahan</p>
+.logout-button:hover {
+    background-color: #6a0dad;
+    color: #fff;
+    box-shadow: 0 0 15px #e066ff; /* Stronger neon glow on hover */
+}
 
-            <div class="actions">
-                <button>Like</button>
-                <button>Comment</button>
-                <button>Share</button>
-            </div>
-        </div>
+.sidebar {
+    display: none; /* Hide sidebar on mobile */
+}
 
-        <!-- Post 4 -->
-        <div class="post">
-            <div class="post-header">
-                <img src="profile1.jpg" alt="Profile picture">
-                <div class="user-info">
-                    <h3>Anna Belle</h3>
-                    <span class="username">@annabelle</span>
-                    <span class="date">August 20, 2024</span>
-                </div>
-            </div>
-            <p>Ito yung araw na hindi po tayo mej makapagusap dahil sa naraning gawin sa paaralan :(</p>
-            <p>‎ </p>
-            <p>Lungkot po me, pero naiindihan ko naman po</p>
-            <p>(BOO)</p>
-            <img src="IMG20240819155102.jpg" alt="Post image">
-            <div class="actions">
-                <button>Like</button>
-                <button>Comment</button>
-                <button>Share</button>
-            </div>
-        </div>
+.main-content {
+    padding: 10px;
+    margin-top: 10px;
+}
 
-        <!-- Post 5 -->
-        <div class="post">
-            <div class="post-header">
-                <img src="profile1.jpg" alt="Profile picture">
-                <div class="user-info">
-                    <h3>Jhon Mark L. Lumibao</h3>
-                    <span class="username">@Hatsuki</span>
-                    <span class="date">August 20, 2024</span>
-                </div>
-            </div>
-            <p>Testing......</p>
-            <img src="image5.jpg" alt="Photo, lagay mo dito">
-            <div class="actions">
-                <button>Like</button>
-                <button>Comment</button>
-                <button>Share</button>
-            </div>
-        </div>
+/* Post Styles */
+.post {
+    background-color: #3a3a3a;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px #e066ff; /* Neon glow */
+    border-radius: 10px;
+}
 
-        <!-- Post 6 -->
-        <div class="post">
-            <div class="post-header">
-                <img src="profile1.jpg" alt="Profile picture">
-                <div class="user-info">
-                    <h3>Jhon Mark L. Lumibao</h3>
-                    <span class="username">@Hatsuki</span>
-                    <span class="date">August 17, 2024</span>
-                </div>
-            </div>
-            <p>Test 2</p>
-            <div class="actions">
-                <button>Like</button>
-                <button>Comment</button>
-                <button>Share</button>
-            </div>
-        </div>
-    </div>
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
 
-    <script src="scripts.js"></script>
-</body>
-</html>
+.post-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Ensures the profile picture is perfectly circular */
+    margin-right: 10px;
+    box-shadow: 0 0 5px #e066ff; /* Neon glow */
+    object-fit: cover; /* Ensures the image covers the entire circular area */
+}
+
+.post-header .user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-header .user-info h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #e066ff; /* Neon text */
+    text-shadow: 0 0 5px #e066ff; /* Neon glow */
+}
+
+.post-header .user-info .username {
+    font-size: 14px;
+    color: #b3b3b3;
+}
+
+.post-header .user-info .date {
+    font-size: 12px;
+    color: #8a8a8a;
+}
+
+.post p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #dcdcdc;
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #e066ff; /* Neon glow */
+}
+
+.actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.actions button {
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.actions button:hover {
+    background-color: #e066ff;
+    box-shadow: 0 0 10px #e066ff; /* Neon glow on hover */
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .header .search-bar {
+        display: none; /* Hide search bar on mobile */
+    }
+
+    .main-content {
+        padding: 5px;
+    }
+
+    .post-header img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .post-header .user-info h3 {
+        font-size: 16px;
+    }
+
+    .post-header .user-info .username,
+    .post-header .user-info .date {
+        font-size: 12px;
+    }
+}
