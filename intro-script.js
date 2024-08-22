@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Display the splash screen for 5 seconds
     setTimeout(function() {
         document.getElementById('splash-screen').style.display = 'none';
         document.getElementById('login-screen').classList.remove('hidden');
-    }, 5000);
+    }, 5000); // 5 seconds for splash screen
 
-    // Handle the login form submission
     document.getElementById('login-form').addEventListener('submit', function(event) {
         event.preventDefault();
 
