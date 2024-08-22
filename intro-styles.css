@@ -5,7 +5,7 @@ body {
     color: #dcdcdc;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow: hidden; /* Prevent scrolling */
     height: 100vh;
 }
 
@@ -35,7 +35,7 @@ body {
 
 /* Overlay for Post-Login Animation */
 .login-overlay {
-    position: fixed; /* Changed to fixed to cover the entire screen */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -45,7 +45,6 @@ body {
     visibility: hidden;
     z-index: 9999;
     transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
-    animation: none;
 }
 
 .login-overlay.visible {
@@ -71,7 +70,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    padding: 20px;
     box-sizing: border-box;
 }
 
@@ -84,7 +82,7 @@ body {
     max-width: 400px;
     width: 100%;
     text-align: center;
-    z-index: 2; /* Ensures it appears above the splash screen */
+    z-index: 2;
 }
 
 .login-container h1 {
