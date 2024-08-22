@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background: #141414; /* Dark background to enhance neon effect */
+    background: url(''); /* Dark background to enhance neon effect */
     display: flex;
     justify-content: center;
     align-items: center;
