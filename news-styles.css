@@ -10,71 +10,59 @@ body {
 .header {
     background-color: #6a0dad; /* Light purple */
     color: white;
-    padding: 10px 20px;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 0 10px #e066ff; /* Neon glow */
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
 }
 
 .header .logo {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     text-shadow: 0 0 10px #e066ff; /* Neon glow */
 }
 
-.logout-button {
-    background-color: #dcdcdc; /* Same as search bar background */
-    color: #2e2e2e; /* Dark text color */
-    padding: 5px 15px;
+.header .search-bar {
+    width: 100%;
+    margin-left: 10px;
+    padding: 5px;
     border-radius: 15px;
     border: none;
-    cursor: pointer;
-    font-size: 16px;
-    box-shadow: 0 0 10px #e066ff; /* Neon glow */
-    transition: all 0.3s ease;
+    max-width: 300px; /* Increased max-width for better appearance on larger screens */
+    background-color: #dcdcdc;
+    color: #2e2e2e;
 }
 
-.logout-button:hover {
-    background-color: #6a0dad;
-    color: #fff;
-    box-shadow: 0 0 15px #e066ff; /* Stronger neon glow on hover */
+.sidebar {
+    display: none; /* Hide sidebar on mobile */
 }
 
 .main-content {
-    padding: 60px 20px 20px; /* Adjusted for fixed header */
-    margin: 0 auto;
-    max-width: 1200px; /* Limit content width */
+    padding: 10px;
+    margin-top: 10px;
 }
 
 /* Post Styles */
 .post {
     background-color: #3a3a3a;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 15px;
+    margin-bottom: 10px;
     box-shadow: 0 0 10px #e066ff; /* Neon glow */
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
 }
 
 .post-header {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .post-header img {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%; /* Ensures the profile picture is perfectly circular */
-    margin-right: 15px;
+    margin-right: 10px;
     box-shadow: 0 0 5px #e066ff; /* Neon glow */
     object-fit: cover; /* Ensures the image covers the entire circular area */
 }
@@ -86,69 +74,80 @@ body {
 
 .post-header .user-info h3 {
     margin: 0;
-    font-size: 20px;
+    font-size: 18px;
     color: #e066ff; /* Neon text */
     text-shadow: 0 0 5px #e066ff; /* Neon glow */
 }
 
 .post-header .user-info .username {
-    font-size: 16px;
+    font-size: 14px;
     color: #b3b3b3;
 }
 
 .post-header .user-info .date {
-    font-size: 14px;
+    font-size: 12px;
     color: #8a8a8a;
 }
 
 .post p {
     margin: 0;
     font-size: 16px;
-    line-height: 1.5;
     color: #dcdcdc;
 }
 
 .post img {
     width: 100%;
-    height: auto;
-    margin-top: 15px;
     border-radius: 10px;
-    box-shadow: 0 0 10px #e066ff; /* Neon glow */
+    margin-top: 10px;
+    box-shadow: 0 0 15px #e066ff; /* Neon glow for images */
 }
 
-.actions {
-    margin-top: 15px;
+.post .actions {
+    margin-top: 10px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 
-.actions button {
-    background-color: #6a0dad;
-    color: white;
+.post .actions button {
+    background: none;
     border: none;
-    padding: 8px 20px;
-    border-radius: 15px;
+    color: #e066ff;
     cursor: pointer;
-    font-size: 16px;
-    margin-right: 10px;
+    font-size: 14px;
+    padding: 10px;
+    flex-grow: 1;
+    text-align: center;
+    text-shadow: 0 0 5px #e066ff; /* Neon glow */
     transition: all 0.3s ease;
 }
 
-.actions button:hover {
-    background-color: #e066ff;
-    box-shadow: 0 0 10px #e066ff; /* Neon glow on hover */
+.post .actions button:hover {
+    background-color: #6a0dad;
+    border-radius: 5px;
+    box-shadow: 0 0 15px #e066ff; /* Neon glow */
 }
 
-/* Mobile Styles */
-@media screen and (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
+/* Additional Styles for the New Button */
+#press-button {
+    background-color: #4CAF50; /* Green background */
+}
+
+#press-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .header .logo {
+        font-size: 18px;
     }
 
-    .header .logout-button {
-        align-self: flex-end;
-        margin-top: 10px;
+    .header .search-bar {
+        max-width: 150px; /* Reduced width for mobile */
+    }
+
+    .main-content {
+        padding: 5px;
     }
 
     .post-header img {
@@ -160,12 +159,19 @@ body {
         font-size: 16px;
     }
 
-    .post-header .user-info .username,
-    .post-header .user-info .date {
+    .post p {
+        font-size: 14px;
+    }
+
+    .post .actions button {
         font-size: 12px;
     }
 
-    .main-content {
-        padding: 5px;
+    .post-header .user-info .username {
+        font-size: 12px;
+    }
+
+    .post-header .user-info .date {
+        font-size: 10px;
     }
 }
