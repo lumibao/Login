@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const password = document.getElementById('password').value;
 
         // Simple validation example
-        if (username === 'My Source of Light' && password === 'Ikaw lang ang laman') {
+        if (username === 'My Source of Light' && password === 'IloveyouChelsea') {
             // Trigger overlay animation
             const overlay = document.getElementById('login-overlay');
             overlay.classList.remove('hidden');
